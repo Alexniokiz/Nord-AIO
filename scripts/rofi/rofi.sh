@@ -22,3 +22,5 @@ main () {
 move_oldconfig () {
     mv $HOME/.config/rofi $HOME/.config/rofiOLD
 }
+
+main "$@"

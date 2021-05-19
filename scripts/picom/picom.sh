@@ -3,6 +3,7 @@ DIR=$(pwd)
 
 main () {
     echo "##### PICOM ####"
+    yay -Rc picom
     rm -rf $HOME/.config/picom
     if [[ -f $HOME/.config/picom.conf ]]
     then
@@ -16,7 +17,8 @@ main () {
         done
     fi
     yay -Sy picom-ibhagwan-git
-    cp $DIR/config/picom.conf $HOME/.config/picom.conf
+    cp $DIR/config/picom.conf $HOME/.config/
+    picom -b -f
     echo "##### PICOM DONE ####"
 }
 

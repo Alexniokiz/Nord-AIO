@@ -9,12 +9,12 @@ font pango: DejaVu Sans 12
 floating_modifier $super
 
 #autostart
-exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale ~/Downloads/nord.jpg
+exec --no-startup-id picom -b -f
+exec --no-startup-id ~/.fehbg &
 exec --no-startup-id xsettingsd &
-exec --no-startup-id compton -b
 exec_always --no-startup-id  ~/.config/polybar/launch.sh --blocks
 
+# exec --no-startup-id xrandr --output HDMI-1 --rotate left --left-of DP-1
 # start a terminal
 bindsym $super+Return exec kitty
 

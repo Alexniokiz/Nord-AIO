@@ -24,14 +24,12 @@ install_themes() {
         mv "$PDIR" "${PDIR}.old"
         { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; cp -rf $TDIR/$STYLE/launch.sh "$PDIR"; }
     else
-        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; cp -rf $TDIR/$STYLE/launch.sh "$PDIR"; }	
+        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; cp -rf $TDIR/$STYLE/launch.sh "$PDIR"; }
     fi
     if [[ -f "$PDIR/launch.sh" ]]; then
         echo -e "[*] Successfully Installed the blocks theme.\n"
-        exit 0
     else
         echo -e "[!] Failed to install.\n"
-        exit 1
     fi
 }
 

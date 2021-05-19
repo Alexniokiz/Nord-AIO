@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 DIR=`pwd`
 TDIR=$DIR/polybar-themes

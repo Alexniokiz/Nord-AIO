@@ -8,7 +8,8 @@ main() {
     if [[ $? != 0 ]]; then
         pacman -Sy kitty
     fi
-cp $DIR/config/kitty.conf $HOME/.config/kitty/kitty.conf
+    mikdir $HOME/.config/kitty 2>&1 /dev/null
+    cp $DIR/config/kitty.conf $HOME/.config/kitty/
 }
 
 main "$@"

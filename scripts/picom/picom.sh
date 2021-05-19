@@ -17,6 +17,7 @@ main () {
     fi
     yay -Sy picom-ibhagwan-git
     cp $DIR/config/picom.conf $HOME/.config/picom.conf
+    echo "##### PICOM DONE ####"
 }
 
 move_oldconfig () {

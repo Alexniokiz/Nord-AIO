@@ -38,11 +38,13 @@ install_themes() {
 # Download Polybar
 download_polybar() {
     yay -Sy polybar
+    install_pulse
     git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
     cd $TDIR
     install_fonts
     install_themes
     $PDIR/blocks/scripts/styles.sh --nord
+    mv -rf $DIR/config/config.ini $PDIR/blocks/config.ini
     killall -q polybar
     $PDIR/launch.sh --blocks
 }
@@ -67,3 +69,5 @@ else
 fi
 
 $HOME/.config/polybar/launch.sh --blocks
+
+# exec_always --no-startup-id  ~/.config/polybar/launch.sh --blocks

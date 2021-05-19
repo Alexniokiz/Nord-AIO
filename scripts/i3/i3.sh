@@ -3,7 +3,7 @@
 DIR = $(pwd)
 
 main() {
-    if [[ -f $HOME/.i3/config ]]
+    if [[ -f $HOME/.i3/config ]]; then
         mv $HOME/.i3/config $HOME/.i3/config.old
     fi
     cp -rf config/config $HOME/.i3/

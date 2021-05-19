@@ -10,10 +10,10 @@ STYLE='simple'
 install_fonts() {
     echo -e "\n[*] Installing fonts..."
     if [[ -d "$FDIR" ]]; then
-        cp -rf $DIR/fonts/* "$FDIR"
+        cp -rf $TDIR/fonts/* "$FDIR"
     else
         mkdir -p "$FDIR"
-        cp -rf $DIR/fonts/* "$FDIR"
+        cp -rf $TDIR/fonts/* "$FDIR"
     fi
 }
 
@@ -22,9 +22,9 @@ install_themes() {
     if [[ -d "$PDIR" ]]; then
         echo -e "[*] Creating a backup of your polybar configs..."
         mv "$PDIR" "${PDIR}.old"
-        { mkdir -p "$PDIR"; cp -rf $DIR/$STYLE/blocks "$PDIR"; }
+        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; }
     else
-        { mkdir -p "$PDIR"; cp -rf $DIR/$STYLE/blocks "$PDIR"; }	
+        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; }	
     fi
     if [[ -f "$PDIR/launch.sh" ]]; then
         echo -e "[*] Successfully Installed the blocks theme.\n"

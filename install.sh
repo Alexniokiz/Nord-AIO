@@ -103,7 +103,7 @@ i_zsh() {
 
 main() {
     if [[ $1 == "--fast" || $1 == "-f" ]]; then
-        cd $DIR/scripts/polybar && ./polybar.sh && cd $DIR/scripts/kitty && ./kitty.sh &&  cd $DIR/scripts/i3 && ./i3.sh && cd $DIR/scripts/rofi && ./rofi.sh && cd $DIR/scripts/picom && ./picom.sh cd && $DIR/scripts/zsh && ./zsh.sh
+        cd $DIR/scripts/polybar && ./polybar.sh && cd $DIR/scripts/kitty && ./kitty.sh &&  cd $DIR/scripts/i3 && ./i3.sh && cd $DIR/scripts/rofi && ./rofi.sh && cd $DIR/scripts/picom && ./picom.sh  && cd $DIR/scripts/zsh && ./zsh.sh
     else
         clear
         i_poly

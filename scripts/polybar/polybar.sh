@@ -22,9 +22,9 @@ install_themes() {
     if [[ -d "$PDIR" ]]; then
         echo -e "[*] Creating a backup of your polybar configs..."
         mv "$PDIR" "${PDIR}.old"
-        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; }
+        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; cp -rf $TDIR/$STYLE/launch.sh "$PDIR"; }
     else
-        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; }	
+        { mkdir -p "$PDIR"; cp -rf $TDIR/$STYLE/blocks "$PDIR"; cp -rf $TDIR/$STYLE/launch.sh "$PDIR"; }	
     fi
     if [[ -f "$PDIR/launch.sh" ]]; then
         echo -e "[*] Successfully Installed the blocks theme.\n"

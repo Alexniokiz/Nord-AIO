@@ -1,5 +1,5 @@
 #!/bin/bash
-DIR=$(PWD)
+DIR=$(pwd)
 
 main () {
     echo "##### ROFI #####"
@@ -14,7 +14,7 @@ main () {
             esac
         done
     fi
-    sudo yay -Sy rofi
+    yay -Sy rofi
     mkdir $HOME/.config/rofi
     cp -rf $DIR/config/* $HOME/.config/rofi/
     echo "##### ROFI DONE #####"
@@ -25,3 +25,5 @@ move_oldconfig () {
 }
 
 main "$@"
+
+# bindsym $mod+d exec rofi -config ~/.config/rofi/config.rasi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/themes/colors.rasi

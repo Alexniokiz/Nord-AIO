@@ -6,7 +6,7 @@ i_poly() {
     while true; do
         read -p "Do you want to install and custom polybar ? [Y/n] " yn
         case $yn in
-            [Yy]* ) cd $DIR/polybar && ./polybar.sh && cd $DIR;break;;
+            [Yy]* ) cd $DIR/scripts/polybar && ./polybar.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -17,7 +17,7 @@ i_kitty() {
     while true; do
         read -p "Do you want to install and custom kitty ? [Y/n] " yn
         case $yn in
-            [Yy]* ) cd $DIR/kitty && ./kitty.sh && cd $DIR;break;;
+            [Yy]* ) cd $DIR/scripts/kitty && ./kitty.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -28,7 +28,7 @@ i_i3() {
     while true; do
         read -p "Do you want to and custom i3 ? [Y/n] " yn
         case $yn in
-            [Yy]* ) cd $DIR/i3 && ./i3.sh && cd $DIR;break;;
+            [Yy]* ) cd $DIR/scripts/i3 && ./i3.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -39,7 +39,7 @@ i_editors() {
     while true; do
         read -p "Do you want to install and custom some of the most famous editors ? [Y/n] " yn
         case $yn in
-            [Yy]* )  cd $DIR/editor && ./editor.sh && cd $DIR;break;;
+            [Yy]* )  cd $DIR/scripts/editor && ./editor.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -50,7 +50,7 @@ i_picom() {
     while true; do
         read -p "Do you want to install and custom picom ? [Y/n] " yn
         case $yn in
-            [Yy]* )  cd $DIR/picom && ./picom.sh && cd $DIR;break;;
+            [Yy]* )  cd $DIR/scripts/picom && ./picom.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -61,7 +61,7 @@ i_rofi() {
     while true; do
         read -p "Do you want to install and custom rofi ? [Y/n] " yn
         case $yn in
-            [Yy]* ) cd $DIR/rofi && ./rofi.sh && cd $DIR;break;;
+            [Yy]* ) cd $DIR/scripts/rofi && ./rofi.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -72,7 +72,7 @@ i_spotify() {
     while true; do
         read -p "Do you want to install and custom spotify ? [Y/n] " yn
         case $yn in
-            [Yy]* ) cd $DIR/spotify && ./spotify.sh && cd $DIR;break;;
+            [Yy]* ) cd $DIR/scripts/spotify && ./spotify.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -83,7 +83,7 @@ i_code() {
     while true; do
         read -p "Do you want to install and custom vscode ? [Y/n] " yn
         case $yn in
-            [Yy]* )  cd $DIR/vs-code && ./vs-code.sh && cd $DIR;break;;
+            [Yy]* )  cd $DIR/scripts/vs-code && ./vs-code.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -94,7 +94,7 @@ i_zsh() {
     while true; do
         read -p "Do you want to install and custom spotify ? [Y/n] " yn
         case $yn in
-            [Yy]* ) cd $DIR/zsh && ./zsh.sh && cd $DIR;break;;
+            [Yy]* ) cd $DIR/scripts/zsh && ./zsh.sh && cd $DIR;break;;
             [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
@@ -103,7 +103,7 @@ i_zsh() {
 
 main() {
     if [[ $1 == "--fast" || $1 == "-f" ]]; then
-        cd $DIR/polybar && ./polybar.sh && cd $DIR/kitty && ./kitty.sh && cd $DIR/zsh && ./zsh.sh && cd $DIR/i3 && ./i3.sh && cd $DIR/rofi && ./rofi.sh && cd $DIR/picom && ./picom.sh
+        cd $DIR/scripts/polybar && ./polybar.sh && cd $DIR/scripts/kitty && ./kitty.sh && cd $DIR/scripts/zsh && ./zsh.sh && cd $DIR/scripts/i3 && ./i3.sh && cd $DIR/scripts/rofi && ./rofi.sh && cd $DIR/scripts/picom && ./picom.sh
     else
         clear
         i_poly

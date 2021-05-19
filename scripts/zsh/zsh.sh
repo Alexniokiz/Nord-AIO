@@ -11,7 +11,7 @@ check_oh_my_zsh() {
     if [[ ! -d $HOME/.oh-my-zsh ]]; then
         echo "Zeubie"
         sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-        yes | yay -Sy zsh-autosuggestions
+        git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     fi
 }
 

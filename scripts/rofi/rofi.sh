@@ -14,6 +14,7 @@ main () {
             esac
         done
     fi
+    sudo yay -Sy rofi
     mkdir $HOME/.config/rofi
     cp -rf $DIR/config/* $HOME/.config/rofi/
     echo "##### ROFI DONE #####"

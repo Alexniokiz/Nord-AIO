@@ -15,7 +15,7 @@ main () {
             esac
         done
     fi
-    yay -S picom-ibhagwan-git
+    yay -Sy picom-ibhagwan-git
     cp $DIR/config/picom.conf $HOME/.config/picom.conf
 }
 

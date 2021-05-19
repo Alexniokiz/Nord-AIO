@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR = $(pwd)
+DIR=$(pwd)
 
 i_poly() {
     while true; do

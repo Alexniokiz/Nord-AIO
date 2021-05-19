@@ -3,13 +3,13 @@
 DIR=$(pwd)
 
 main() {
-    pacman -Sy ttf-fira-code
-    pacman -Qi kitty > /dev/null
-    if [[ $? != 0 ]]; then
-        pacman -Sy kitty
-    fi
-    mikdir $HOME/.config/kitty 2>&1 /dev/null
-    cp $DIR/config/kitty.conf $HOME/.config/kitty/
+	yay -Rc ttf-fira-code
+	yay -Sy ttf-fira-code
+	yay -Rc kitty
+	yay -Sy kitty
+	rm -rf $HOME/.config/kitty
+	mkdir $HOME/.config/kitty
+	cp $DIR/config/kitty.conf $HOME/.config/kitty/kitty.conf
 }
 
 main "$@"

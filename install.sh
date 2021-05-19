@@ -7,7 +7,7 @@ i_poly() {
         read -p "Do you want to install and custom polybar ? [Y/n] " yn
         case $yn in
             [Yy]* ) cd $DIR/polybar && ./polybar.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -18,7 +18,7 @@ i_kitty() {
         read -p "Do you want to install and custom kitty ? [Y/n] " yn
         case $yn in
             [Yy]* ) cd $DIR/kitty && ./kitty.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -29,7 +29,7 @@ i_i3() {
         read -p "Do you want to and custom i3 ? [Y/n] " yn
         case $yn in
             [Yy]* ) cd $DIR/i3 && ./i3.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -40,7 +40,7 @@ i_editors() {
         read -p "Do you want to install and custom some of the most famous editors ? [Y/n] " yn
         case $yn in
             [Yy]* )  cd $DIR/editor && ./editor.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -51,7 +51,7 @@ i_picom() {
         read -p "Do you want to install and custom picom ? [Y/n] " yn
         case $yn in
             [Yy]* )  cd $DIR/picom && ./picom.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -62,7 +62,7 @@ i_rofi() {
         read -p "Do you want to install and custom rofi ? [Y/n] " yn
         case $yn in
             [Yy]* ) cd $DIR/rofi && ./rofi.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -73,7 +73,7 @@ i_spotify() {
         read -p "Do you want to install and custom spotify ? [Y/n] " yn
         case $yn in
             [Yy]* ) cd $DIR/spotify && ./spotify.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -84,7 +84,7 @@ i_code() {
         read -p "Do you want to install and custom vscode ? [Y/n] " yn
         case $yn in
             [Yy]* )  cd $DIR/vs-code && ./vs-code.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done
@@ -95,7 +95,7 @@ i_zsh() {
         read -p "Do you want to install and custom spotify ? [Y/n] " yn
         case $yn in
             [Yy]* ) cd $DIR/zsh && ./zsh.sh && cd $DIR;break;;
-            [Nn]* ) exit 0;;
+            [Nn]* ) break;;
             * ) echo "Please answer [y/n]";;
         esac
     done

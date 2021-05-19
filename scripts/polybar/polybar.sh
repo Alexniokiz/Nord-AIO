@@ -35,7 +35,7 @@ install_themes() {
 
 # Download Polybar
 download_polybar() {
-    yay -Sy polybar
+    yes | yay -Sy polybar
     install_pulse
     rm -rf polybar-themes
     git clone --depth=1 https://github.com/adi1090x/polybar-themes.git

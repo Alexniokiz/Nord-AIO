@@ -14,6 +14,7 @@ main () {
             [Nn]* ) break;;
             * ) echo "OPEN A NEW TERMINAL, START VIM, AND TYPE :PlugInstall , WAIT FOR IT TO FINISH AND COMEBACK HERE PRESSING Y OR N";;
     esac
+    done
 }
 
 main "$@"

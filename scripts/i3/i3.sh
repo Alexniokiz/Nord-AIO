@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR = $(pwd)
+DIR=$(pwd)
 
 main() {
     if [[ -f $HOME/.i3/config ]]; then

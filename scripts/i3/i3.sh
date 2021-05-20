@@ -6,7 +6,7 @@ main() {
     if [[ -f $HOME/.i3/config ]]; then
         mv $HOME/.i3/config $HOME/.i3/config.old
     fi
-    yes | yay -Sy brave feh playerctl
+    yes | yay -Sy brave feh playerctl brightnessctl
     cp -rf config/config $HOME/.i3/
     mkdir -p $HOME/.config/background
     cp -rf config/nord.jpg $HOME/.config/background

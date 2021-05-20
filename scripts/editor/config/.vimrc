@@ -28,6 +28,7 @@ set encoding=UTF-8
 augroup nord-overrides
       autocmd!
       autocmd Colorscheme nord highlight Comment ctermfg=14
+      autocmd Colorscheme nord highlight LineNr ctermfg=grey
 augroup END
 
 colorscheme nord

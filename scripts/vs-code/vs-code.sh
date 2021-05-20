@@ -1,11 +1,11 @@
 #!/bin/bash
 
 check_code() {
-    pacman -Qi visual-studio-code-insiders-bin > /dev/null
+    yay -Qi visual-studio-code-insiders-bin
     if [[ $? != 0 ]]; then
-        pacman -Qi code > /dev/null
+        yay -Qi code
         if [[ $? != 0 ]]; then
-            pacman -Sy visual-studio-code-insiders-bin
+            yay -Sy visual-studio-code-insiders-bin
         fi
     fi
 }

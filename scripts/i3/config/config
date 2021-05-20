@@ -1,12 +1,12 @@
 # set modifier
-set $super Mod4
+set $mod Mod4
 set $alt Mod1
 
 # set font
 font pango: DejaVu Sans 12
 
-# Use Mouse+$super to drag floating windows to their wanted position
-floating_modifier $super
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
 
 #autostart
 exec --no-startup-id picom -b -f
@@ -16,16 +16,16 @@ exec_always --no-startup-id  ~/.config/polybar/launch.sh --blocks
 
 # exec --no-startup-id xrandr --output HDMI-1 --rotate left --left-of DP-1
 # start a terminal
-bindsym $super+Return exec kitty
+bindsym $mod+Return exec kitty
 
 # start dmenu (a program launcher)
-bindsym $super+d exec rofi -config ~/.config/rofi/config.rasi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/themes/colors.rasi
+bindsym $mod+d exec rofi -config ~/.config/rofi/config.rasi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/themes/colors.rasi
 
 # common apps keybinds
 bindsym Print exec scrot ~/Pictures/Screenshots/Cheese_%a-%d%b%y_%H.%M.png -e 'viewnior ~/$f' 
-bindsym $super+Shift+b exec brave
-bindsym $super+Shift+f exec thunar;workspace 3;focus
-bindsym $super+Shift+g exec geany
+bindsym $mod+Shift+b exec brave
+bindsym $mod+Shift+f exec thunar;workspace 3;focus
+bindsym $mod+Shift+g exec geany
 
 #change volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
@@ -38,63 +38,63 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 
 # kill focused window
-bindsym $super+c kill
+bindsym $mod+c kill
 bindsym $alt+F4 kill
 
 # change focus
-bindsym $super+Left focus left
-bindsym $super+Down focus down
-bindsym $super+Up focus up
-bindsym $super+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
-bindsym $super+Shift+Left move left
-bindsym $super+Shift+Down move down
-bindsym $super+Shift+Up move up
-bindsym $super+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $super+h split h
+bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $super+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $super+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout split
-bindsym $super+s layout toggle split
+bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
-bindsym $super+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $super+Shift+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # switch to workspace
 bindsym $alt+Control+Right workspace next
 bindsym $alt+Control+Left workspace prev
-bindsym $super+1 workspace 1
-bindsym $super+2 workspace 2
-bindsym $super+3 workspace 3
-bindsym $super+4 workspace 4
-bindsym $super+5 workspace 5
-bindsym $super+6 workspace 6
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
 
 # move focused container to workspace
-bindsym $super+Shift+1 move container to workspace 1
-bindsym $super+Shift+2 move container to workspace 2
-bindsym $super+Shift+3 move container to workspace 3
-bindsym $super+Shift+4 move container to workspace 4
-bindsym $super+Shift+5 move container to workspace 5
-bindsym $super+Shift+6 move container to workspace 6
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
 
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $super+Shift+r restart
+bindsym $mod+Shift+r restart
 
 # exit i3
-bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+bindsym $mod+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -105,7 +105,7 @@ mode "resize" {
         bindsym Return mode "default"
 }
 
-bindsym $super+r mode "resize"
+bindsym $mod+r mode "resize"
 
 smart_gaps on
 gaps inner 15

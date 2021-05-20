@@ -25,6 +25,11 @@ call plug#end()
 
 set encoding=UTF-8
 
+augroup nord-overrides
+      autocmd!
+      autocmd Colorscheme nord highlight Comment ctermfg=14
+augroup END
+
 colorscheme nord
 
 let g:auto_save = 1

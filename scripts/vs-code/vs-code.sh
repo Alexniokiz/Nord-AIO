@@ -18,16 +18,16 @@ move_config() {
 
 main() {
     check_code
-    # code-insiders --install-extension arcticicestudio.nord-visual-studio-code
-    # code-insiders --install-extension TabNine.tabnine-vscode
-    # code-insiders --install-extension eamodio.gitlens
-    # code-insiders --install-extension nicolaspolomack.epitech-c-cpp-headers
-    # code-insiders --install-extension adpyke.codesnap
-    # code-insiders --install-extension vmsynkov.colonize
-    # code-insiders --install-extension ms-vscode.cpptools
-    # code-insiders --install-extension coenraads.bracket-pair-colorizer
-    # code-insiders --install-extension ms-vsliveshare.vsliveshare
-    # code-insiders --install-extension vscode-icons-team.vscode-icons
+    code-insiders --install-extension arcticicestudio.nord-visual-studio-code
+    code-insiders --install-extension TabNine.tabnine-vscode
+    code-insiders --install-extension eamodio.gitlens
+    code-insiders --install-extension nicolaspolomack.epitech-c-cpp-headers
+    code-insiders --install-extension adpyke.codesnap
+    code-insiders --install-extension vmsynkov.colonize
+    code-insiders --install-extension ms-vscode.cpptools
+    code-insiders --install-extension coenraads.bracket-pair-colorizer
+    code-insiders --install-extension ms-vsliveshare.vsliveshare
+    code-insiders --install-extension vscode-icons-team.vscode-icons
     move_config
 }
 

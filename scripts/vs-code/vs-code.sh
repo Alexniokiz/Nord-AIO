@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR=$(pwd)
+
 check_code() {
     yay -Qi visual-studio-code-insiders-bin
     if [[ $? != 0 ]]; then
@@ -10,18 +12,23 @@ check_code() {
     fi
 }
 
+move_config() {
+    cp -rf $DIR/scripts/vs-code/config/settings.json $HOME/".config/Code - Insiders/User/settings.json"
+}
+
 main() {
     check_code
-    code-insiders --install-extension arcticicestudio.nord-visual-studio-code
-    code-insiders --install-extension TabNine.tabnine-vscode
-    code-insiders --install-extension eamodio.gitlens
-    code-insiders --install-extension nicolaspolomack.epitech-c-cpp-headers
-    code-insiders --install-extension adpyke.codesnap
-    code-insiders --install-extension vmsynkov.colonize
-    code-insiders --install-extension ms-vscode.cpptools
-    code-insiders --install-extension coenraads.bracket-pair-colorizer
-    code-insiders --install-extension ms-vsliveshare.vsliveshare
-    code-insiders --install-extension vscode-icons-team.vscode-icons
+    # code-insiders --install-extension arcticicestudio.nord-visual-studio-code
+    # code-insiders --install-extension TabNine.tabnine-vscode
+    # code-insiders --install-extension eamodio.gitlens
+    # code-insiders --install-extension nicolaspolomack.epitech-c-cpp-headers
+    # code-insiders --install-extension adpyke.codesnap
+    # code-insiders --install-extension vmsynkov.colonize
+    # code-insiders --install-extension ms-vscode.cpptools
+    # code-insiders --install-extension coenraads.bracket-pair-colorizer
+    # code-insiders --install-extension ms-vsliveshare.vsliveshare
+    # code-insiders --install-extension vscode-icons-team.vscode-icons
+    move_config
 }
 
 main "$@"
